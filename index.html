@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Grid Toggle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    .active-toggle {
+      color: blue;
+    }
+
+    .post-card img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    #postsContainer.grid-mode .post-wrapper {
+      padding: 0.5rem;
+    }
+
+    .post-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+.post-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  #postsContainer.grid-mode .card-extra {
+    display: none;
+  }
+
+  .active-toggle {
+    color: blue;
+  }
+
+  .post-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #postsContainer.grid-mode .card-extra {
+    display: none;
+  }
+
+  #postsContainer.grid-mode .post-card img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #postsContainer.grid-mode .post-card {
+    height: 100%;
+  }
+
+  </style>
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-light bg-white shadow-sm px-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-instagram me-2 fs-4"></i>
+      <span class="fs-5 fw-bold">Instagram</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+      <div class="dropdown">
+        <button class="btn btn-light border dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-gear-fill"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accessibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="text-center my-3">
+    <i class="bi bi-grid-fill fs-4 toggle-icon" id="gridView" role="button" title="Grid View"></i>
+    <i class="bi bi-square-fill fs-4 toggle-icon active-toggle me-3" id="listView" role="button" title="List View"></i>
+
+  </div>
+
+  <!-- Posts Container -->
+  <div class="container">
+    <div class="row" id="postsContainer">
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Higher purpose</span>
+        <span class="text-muted">32 BBY</span>
+      </div>
+    </div>
+    <img src="https://i.etsystatic.com/21061086/r/il/725e2d/3804222930/il_570xN.3804222930_3xc8.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>10 Likes</strong></p>
+        <p class="mb-0">Poster Child</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Race for Freedom</span>
+        <span class="text-muted">32 BBY</span>
+      </div>
+    </div>
+    <img src="https://sm.ign.com/ign_es/news/m/mother-of-/mother-of-young-anakin-actor-breaks-silence-25-years-after-p_rwgy.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>25 Likes</strong></p>
+        <p class="mb-0">Now this is Podracing</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Chosen One</span>
+        <span class="text-muted">32 BBY</span>
+      </div>
+    </div>
+    <img src="https://media.revistagq.com/photos/5e045ff988d9060008f139b9/1:1/w_669,h_669,c_limit/jake-lloyd-interprete-anakin-skywalker-esquizofrenia.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>61 Likes</strong></p>
+        <p class="mb-0">Leaving Tatooine</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Lucrehulk</span>
+        <span class="text-muted">32 BBY</span>
+      </div>
+    </div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUIhbGa16rmh2IHC9JujXEh0RRRetl52X1vkqYlP1jVYN7Y4WiVkcLGOmtDZs42qr02jKLRj4_d43jPBsg7WnjNakMOqZehnov-N0V2JzJns7zDUFvKc4pqKjnndKCJMCtrCTLbsP9BQEG/s1600/trade+federation+controle+ship+star+wars+episode+one+1999.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>100 Likes</strong></p>
+        <p class="mb-0">Big win</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Padawan</span>
+        <span class="text-muted">22 BBY</span>
+      </div>
+    </div>
+    <img src="https://i.pinimg.com/736x/55/e2/de/55e2def1caaa29182181483bb649a7af.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>1468 Likes</strong></p>
+        <p class="mb-0">Knight in training</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Naboo Date</span>
+        <span class="text-muted">22 BBY</span>
+      </div>
+    </div>
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/12/star-wars-episodio-2-anakin-padme-2162091.jpg?tf=3840x" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>2463 Likes</strong></p>
+        <p class="mb-0">Reuiniting with Padme</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Arena Fight</span>
+        <span class="text-muted">22 BBY</span>
+      </div>
+    </div>
+    <img src="https://hips.hearstapps.com/hmg-prod/images/https-i-cdn-tntdrama-com-assets-images-2017-03-attack-of-the-clones-1600x900-0-1652536081.jpg?resize=980:*" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>10346 Likes</strong></p>
+        <p class="mb-0">Rescuing my master</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">First Sith Fight</span>
+        <span class="text-muted">22 BBY</span>
+      </div>
+    </div>
+    <img src="https://rebellegion.com/wp-content/uploads/2024/02/anakin-skywalker-ep2.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>6832 Likes</strong></p>
+        <p class="mb-0">About to duel Count Dooku</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Knightfall</span>
+        <span class="text-muted">19 BBY</span>
+      </div>
+    </div>
+    <img src="https://i1.sndcdn.com/artworks-000237793250-v78a81-t1080x1080.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>4765 Likes</strong></p>
+        <p class="mb-0">The traitors will be put to justice</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Mustafar</span>
+        <span class="text-muted">19 BBY</span>
+      </div>
+    </div>
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2021/10/anakin-skywalker-venganza-sith-2510475.jpg?tf=3840x" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>15845 Likes</strong></p>
+        <p class="mb-0">About to end the War</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Fall of the Republic</span>
+        <span class="text-muted">19 BBY</span>
+      </div>
+    </div>
+    <img src="https://img.asmedia.epimg.net/resizer/v2/XHIV5JSTN5BSBMR7ZQU3X4N4CI.jpg?auth=8fc341053364099655365ede27be0d1eb516d667d304128cb14b8c405c53494f&width=1472&height=828&smart=true" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>8765 Likes</strong></p>
+        <p class="mb-0">My master doesn't understand</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Duel of the Fates</span>
+        <span class="text-muted">19 BBY</span>
+      </div>
+    </div>
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/03/anakin-obi-wan-star-wars-1894347.jpg?tf=3840x" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>9876 Likes</strong></p>
+        <p class="mb-0">He has betrayed me and my new Empire</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Rise of the Empire</span>
+        <span class="text-muted">4 BBY</span>
+      </div>
+    </div>
+    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/02/vader-palpatine.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>456132 Likes</strong></p>
+        <p class="mb-0">Chilling with the Emperor</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Light vs Dark</span>
+        <span class="text-muted">4 BBY</span>
+      </div>
+    </div>
+    <img src="https://sm.ign.com/ign_latam/screenshot/default/1595876393647-493173334-01_7wsu.jpg" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>7653 Likes</strong></p>
+        <p class="mb-0">Bring your son to work day</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 post-wrapper">
+  <div class="card post-card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-extra">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">Prophecy fulfilled</span>
+        <span class="text-muted">4 BBY</span>
+      </div>
+    </div>
+    <img src="https://cdn.images.express.co.uk/img/dynamic/36/590x/Darth-Vader-dying-with-Luke-800353.jpg?r=1686998680160" class="card-img-top" alt="post 2">
+    <div class="card-extra">
+      <div class="card-body">
+        <p class="mb-1"><strong>9461 Likes</strong></p>
+        <p class="mb-0">Back in the Light</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="newPostModalLabel">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="caption" class="form-label">Caption:</label>
+            <textarea class="form-control" id="caption" rows="3" placeholder="Add the caption of your post here"></textarea>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-light border"><i class="bi bi-camera-fill"></i></button>
+            <button class="btn btn-light border"><i class="bi bi-geo-alt-fill"></i></button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const container = document.getElementById("postsContainer");
+    const gridBtn = document.getElementById("gridView");
+    const listBtn = document.getElementById("listView");
+
+    gridBtn.addEventListener("click", () => {
+      container.classList.add("grid-mode");
+      container.classList.remove("row-cols-1");
+      
+      const posts = document.querySelectorAll(".post-wrapper");
+      posts.forEach(post => {
+        post.classList.remove("col-12");
+        post.classList.add("col-12", "col-sm-6", "col-md-4");
+      });
+
+      gridBtn.classList.add("active-toggle");
+      listBtn.classList.remove("active-toggle");
+    });
+
+    listBtn.addEventListener("click", () => {
+      container.classList.remove("grid-mode");
+      
+      const posts = document.querySelectorAll(".post-wrapper");
+      posts.forEach(post => {
+        post.classList.remove("col-sm-6", "col-md-4");
+        post.classList.add("col-12");
+      });
+
+      listBtn.classList.add("active-toggle");
+      gridBtn.classList.remove("active-toggle");
+    });
+
+    // Default view: list
+    window.onload = () => listBtn.click();
+  </script>
+</body>
+</html>
